@@ -70,8 +70,7 @@ Despite missing the revenue target by **4.1%**, the company maintains **very str
 ---
 
 ## A. Sales Overview Dashboard
-📷 Screenshot:  
-`images/overview_dashboard.png`
+
 <img width="553" height="317" alt="Sales Overview" src="https://github.com/user-attachments/assets/3106cc54-b219-4f8f-b166-40d186e35660" />
 
 ### Key Metrics
@@ -145,8 +144,7 @@ Examples:
 ---
 
 ## 👥 B. Customer Dashboard
-📷 Screenshot:  
-`images/customer_dashboard.png`
+
 <img width="556" height="311" alt="Customers" src="https://github.com/user-attachments/assets/d8d415f0-67c2-468a-bf80-28eb5c45d1e9" />
 
 ### Customer Trends (2023–2025)
@@ -161,8 +159,7 @@ Examples:
 ---
 
 ## 💰 C. Profitability Dashboard
-📷 Screenshot:  
-`images/profitability_dashboard.png`
+
 <img width="554" height="311" alt="Profitability" src="https://github.com/user-attachments/assets/fae0f41d-e6e1-4afe-85b6-5c568fdeb58c" />
 
 ### Profitability Metrics
@@ -181,8 +178,7 @@ Examples:
 ---
 
 ## 📉 D. Change Analysis Dashboard
-📷 Screenshot:  
-`images/change_analysis.png`
+
 <img width="557" height="314" alt="Change Analysis" src="https://github.com/user-attachments/assets/81463727-820a-4f5b-9595-d688d202f956" />
 
 ### Growth Behavior
@@ -207,7 +203,7 @@ Examples:
 
 ---
 
-## Tools & Technologies
+## 6. Tools & Technologies
 - Power BI  
 - Power Query (ETL)  
 - DAX  
