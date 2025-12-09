@@ -1,126 +1,213 @@
 # Global Beverage Sales & Profitability Dashboard (Power BI)
 
-## 1. Background & Overview
-This project delivers a comprehensive **Power BI sales intelligence dashboard** for a global beverage company operating across **North America, Europe, and the Middle East**. The organization previously relied on fragmented Excel reports, which limited real-time visibility into performance.
+---
 
-The objective of this project was to build a **centralized, executive-ready analytics solution** to track:
-- Sales vs target performance  
-- Profitability  
-- Product and regional trends  
-- Retail channel effectiveness  
-- Sales manager performance  
+## 1. Background & Overview
+This project delivers an executive-level **Power BI sales intelligence dashboard** for a global beverage company operating across **North America, Europe, and the Middle East**. Prior to this solution, reporting was fragmented across spreadsheets, delaying insights and limiting strategic visibility.
+
+The objective was to build a **centralized analytics platform** to monitor:
+- Sales vs Target
+- Profitability
+- Product & Regional Performance
+- Customer Channel Mix
+- Sales Manager Performance
+- Year-over-Year & Quarter-over-Quarter Change
 
 The dashboard analyzes performance from **2023 to 2025** and supports **strategic, data-driven decision-making**.
 
 ---
 
 ## 2. Data Structure Overview
-The dataset represents a simulated but realistic global sales environment and follows a **star-schema data model**.
 
-### 🔹 Fact Table
-- `Sales`  
-  - Order Date  
-  - Country  
-  - Region  
-  - Product  
-  - Sub-Category  
-  - Customer Type  
-  - Sales Manager  
-  - Sales Amount  
-  - Cost  
-  - Profit  
+### Fact Table
+**Sales**
+- Order Date  
+- Country  
+- Region  
+- Product  
+- Sub-Category  
+- Customer Type  
+- Sales Manager  
+- Sales Amount  
+- Cost  
+- Profit  
 
-### 🔹 Dimension Tables
-- `Date` (Year, Quarter, Month)
-- `Country` (Country, Region)
-- `Product` (Category, Sub-Category)
-- `Customer` (Hypermarket, Supermarket)
-- `Manager` (Sales Representative)
+### Dimension Tables
+- **Date:** Year, Quarter, Month  
+- **Country:** Country, Region  
+- **Product:** Category, Sub-Category  
+- **Customer:** Hypermarket, Supermarket  
+- **Manager:** Sales Representative  
 
-### 🔹 Coverage
+### Coverage
 - **Countries:** USA, KSA, UAE, UK, Canada, Oman, Qatar  
 - **Regions:** North America, Europe, Middle East  
 - **Product Categories:** Still Water, Sparkling Water, Flavoured Water, Coolers, Accessories  
 - **Customer Types:** Hypermarket, Supermarket  
 
+Data was modeled using a **Star Schema** and transformed using **Power Query (ETL)**.
+
 ---
 
 ## 3. Executive Summary
-From 2023–2025, the company generated:
 
-- **Total Sales:** $270.4M  
-- **Target Sales:** $282.1M  
-- **Gross Profit:** $131.2M  
-- **Net Profit:** $101.8M  
-- **Gross Margin:** 48.5%  
-- **Net Profit Margin:** 37.6%  
+| Metric | Value |
+|--------|--------|
+| **Target Sales** | $282.1M |
+| **Actual Sales** | $270.4M |
+| **Variance** | **–$11.7M (–4.1%)** |
+| **Gross Profit** | $131.2M |
+| **Gross Margin** | 48.5% |
+| **Net Profit** | $101.8M |
+| **Net Margin** | 37.6% |
 
-Performance shows **strong profitability despite falling slightly short of the overall revenue target**. Sales are highly concentrated in a few top markets and heavily driven by water-based products, especially **Still Water**.
-
----
-
-## 4. Insight Deep Dive
-
-### Regional & Country Performance
-- **USA** is the top-performing market.
-- **KSA and UAE** are strong secondary contributors.
-- **Qatar and Oman** show the weakest sales performance.
-
-This highlights a **geographic revenue concentration risk**.
+Despite missing the revenue target by **4.1%**, the company maintains **very strong profitability**, indicating a **highly efficient operating model**.
 
 ---
 
-### Product Performance
-- **Still Water** is the dominant revenue driver.
-- **Sparkling Water** is the second-highest contributor.
-- **Accessories** generate minimal revenue.
-
-This shows that product diversification is limited and growth is highly dependent on core beverage products.
+## 4. Insight Deep Dive (By Dashboard Page)
 
 ---
 
-### Retail Channel Performance
-- Some countries operate almost entirely through **one retail channel** (Hypermarket or Supermarket).
-- Others show a balanced channel mix (e.g., USA, Canada, KSA).
+## A. Sales Overview Dashboard
+📷 Screenshot:  
+`images/overview_dashboard.png`
+<img width="553" height="317" alt="Sales Overview" src="https://github.com/user-attachments/assets/3106cc54-b219-4f8f-b166-40d186e35660" />
 
-This presents an opportunity to **optimize retail distribution strategies by market**.
+### Key Metrics
+- Target: **$282.1M**
+- Actual: **$270.4M**
+- Gross Profit: **$131.2M**
+- Net Profit: **$101.8M**
+- Gross Margin: **48.5%**
+- Net Margin: **37.6%**
+
+### Historical Trend Story (2023–2025)
+- **2023:** $15M–$21M per quarter  
+- **2024:** $17M–$25M per quarter  
+- **2025:** Peaks at **$31M per quarter**
+
+✅ Sales show **consistent year-over-year growth**, with **strong acceleration in 2025**.
 
 ---
 
-### Time-Series Trend Analysis
-- Sales show **consistent growth from 2023 to 2025**.
-- Peak quarterly sales reached approximately **$31M in 2025**.
-- Seasonality is visible across multiple years.
+### Country Contribution
+| Country | Sales |
+|----------|--------|
+| USA | $81M |
+| KSA | $68M |
+| UAE | $43M |
+| UK | $36M |
+| Canada | $20M |
+| Oman | $12M |
+| Qatar | $9M |
+
+✅ **USA, KSA, and UAE contribute over 71% of total revenue**, indicating **geographic concentration risk**.
+
+---
+
+### Product Sub-Category Contribution
+| Product | Sales | Share |
+|----------|--------|--------|
+| Still Water | $154.2M | 57% |
+| Sparkling Water | $77.0M | 28% |
+| Flavoured Water | $27.4M | 10% |
+| Coolers | $10.8M | 4% |
+| Accessories | $0.9M | <1% |
+
+✅ The business is **heavily dependent on Still Water**, creating **product portfolio risk**.
+
+---
+
+### Retail Channel Mix
+Examples:
+- **USA:** 84% Supermarket / 16% Hypermarket  
+- **UAE:** 100% Supermarket  
+- **UK:** 70% Supermarket / 30% Hypermarket  
+- **Qatar:** 72% Hypermarket / 28% Supermarket  
+
+✅ Several countries operate with **single-channel dependency**, limiting **distribution scalability**.
 
 ---
 
 ### Sales Manager Performance
-- Top performers generate **8x more revenue** than the lowest performer.
-- This supports **performance-based compensation, coaching, and territory optimization**.
+| Manager | Sales |
+|----------|--------|
+| Qaseem | $40M |
+| Nijoe | $38M |
+| Rajiv | $34M |
+| Azeez | $21M |
+| Tahir | $14M |
+| Jayson | $5M |
+
+✅ The top performer generates **8x more revenue than the lowest performer**, revealing **major productivity variance**.
+
+---
+
+## 👥 B. Customer Dashboard
+📷 Screenshot:  
+`images/customer_dashboard.png`
+<img width="556" height="311" alt="Customers" src="https://github.com/user-attachments/assets/d8d415f0-67c2-468a-bf80-28eb5c45d1e9" />
+
+### Customer Trends (2023–2025)
+- Customer volume increases year-over-year
+- Hypermarkets drive **higher transaction volume**
+- Supermarkets generate **higher revenue per transaction**
+
+✅ The business benefits from a **dual-channel growth model**:
+- Hypermarkets = volume engine  
+- Supermarkets = profit engine  
+
+---
+
+## 💰 C. Profitability Dashboard
+📷 Screenshot:  
+`images/profitability_dashboard.png`
+<img width="554" height="311" alt="Profitability" src="https://github.com/user-attachments/assets/fae0f41d-e6e1-4afe-85b6-5c568fdeb58c" />
+
+### Profitability Metrics
+- Gross Profit: **$131.2M**
+- Net Profit: **$101.8M**
+- Gross Margin: **48.5%**
+- Net Margin: **37.6%**
+
+### Historical Profit Story
+- Profit rises consistently from **2023 → 2025**
+- No margin erosion observed
+- Profit growth closely tracks revenue growth
+
+✅ The company operates with a **high-margin, scalable business model**.
+
+---
+
+## 📉 D. Change Analysis Dashboard
+📷 Screenshot:  
+`images/change_analysis.png`
+<img width="557" height="314" alt="Change Analysis" src="https://github.com/user-attachments/assets/81463727-820a-4f5b-9595-d688d202f956" />
+
+### Growth Behavior
+- 2024 significantly outperformed 2023
+- 2025 delivered record-breaking quarters
+- Growth driven mainly by:
+  - USA
+  - KSA
+  - Still & Sparkling Water
+
+✅ Growth is **unevenly distributed**, requiring **focused investment strategies**.
 
 ---
 
 ## 5. Recommendations
-Based on the dashboard insights, the following recommendations are proposed:
 
-1. **Expand High-Performing Markets**  
-   Increase investment in the USA, KSA, and UAE where demand is already validated.
-
-2. **Reduce Revenue Concentration Risk**  
-   Develop growth strategies for underperforming markets (Qatar, Oman) or reconsider allocation.
-
-3. **Diversify Product Portfolio**  
-   Strengthen promotion of Sparkling and Flavoured Water to reduce reliance on Still Water.
-
-4. **Optimize Retail Channel Strategy**  
-   Expand underutilized retail channels within each country for better market penetration.
-
-5. **Leverage Sales Manager Benchmarking**  
-   Use top performers as models for training underperforming sales teams.
+1. **Reduce 57% reliance on Still Water** by accelerating Sparkling & Flavoured Water marketing.
+2. **Expand retail channels** in single-channel countries.
+3. **Replicate top manager strategies** across low-performing teams.
+4. **Double down on USA, KSA, and UAE for growth investment.**
+5. **Use Change Analysis for demand forecasting and inventory planning.**
 
 ---
 
-## 🛠 Tools & Technologies
+## Tools & Technologies
 - Power BI  
 - Power Query (ETL)  
 - DAX  
@@ -128,3 +215,4 @@ Based on the dashboard insights, the following recommendations are proposed:
 - Excel / CSV  
 
 ---
+
