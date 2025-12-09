@@ -46,8 +46,8 @@ The dashboard analyzes performance from **2023 to 2025** and supports **strategi
 - **Customer Types:** Hypermarket, Supermarket  
 
 Data was modeled using a **Star Schema** and transformed using **Power Query (ETL)**.
-
 Here is the Entity Relationships Diagram
+
 <img width="530" height="365" alt="ERD (Entity Relationships Diagram)" src="https://github.com/user-attachments/assets/919d9ccd-2baa-4307-a14a-172acbe0a9ac" />
 
 ---
